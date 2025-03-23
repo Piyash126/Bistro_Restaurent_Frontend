@@ -60,8 +60,8 @@ export const router = createBrowserRouter([
         element: <Cart></Cart>
       },
       {
-        path:'payment',
-        element:<Payment></Payment>
+        path: 'payment',
+        element: <Payment></Payment>
       },
       //admin routes
       {
@@ -75,7 +75,7 @@ export const router = createBrowserRouter([
       {
         path: 'updateItem/:id',
         element: <AdminRoute><UpdateItem></UpdateItem></AdminRoute>,
-        loader:({params})=>fetch(`http://localhost:5000/menu/${params.id}`)
+        loader: ({ params }) => fetch(`${import.meta.env.VITE_BASE_URL}/menu/${params.id}`)
       },
       {
         path: 'users',
